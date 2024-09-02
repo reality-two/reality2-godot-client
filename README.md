@@ -1,3 +1,3 @@
-## XR using Godot
+## A Reality2 client for Godot XR
 
-More to come soon.
+This is a work-in-progress, but does work...
