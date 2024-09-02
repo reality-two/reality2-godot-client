@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyoe3gu7vhwbq"]
+
+[ext_resource type="Script" path="res://scripts/R2Sentant.gd" id="1_oivew"]
+[ext_resource type="Shader" path="res://materials/iridescent/source/star_shader.gdshader" id="2_6e88w"]
+[ext_resource type="Texture2D" uid="uid://disn7gglbscci" path="res://materials/iridescent/source/face_noise_direction.png" id="3_thne8"]
+[ext_resource type="Script" path="res://materials/iridescent/preview/spin.gd" id="4_871x2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jscou"]
+render_priority = 0
+shader = ExtResource("2_6e88w")
+shader_parameter/albedo = Color(0.670588, 1, 0.745098, 1)
+shader_parameter/specular = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic = 1.0
+shader_parameter/uv_scale = Vector2(6, 4)
+shader_parameter/glitter_glow_intensity = 0.1
+shader_parameter/noise_direction_sampler = ExtResource("3_thne8")
+shader_parameter/shimmer_glow_intensity = 0.2
+shader_parameter/fresnel_power = 4.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_wvkfr"]
+
+[node name="R2Sentant" type="Node3D"]
+script = ExtResource("1_oivew")
+
+[node name="MaterialMesh" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_jscou")
+mesh = SubResource("SphereMesh_wvkfr")
+script = ExtResource("4_871x2")

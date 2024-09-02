@@ -1,0 +1,166 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ai.reality2.sentantvisualiser"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="viewer" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+10        android:targetSdkVersion="33" />
+11
+12    <supports-screens
+12-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:9:5-13:40
+13        android:largeScreens="true"
+13-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:12:9-36
+14        android:normalScreens="true"
+14-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:11:9-37
+15        android:smallScreens="true"
+15-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:10:9-36
+16        android:xlargeScreens="true" />
+16-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:13:9-37
+17
+18    <uses-feature
+18-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:15:5-17:35
+19        android:glEsVersion="0x00030000"
+19-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:16:9-41
+20        android:required="true" />
+20-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:17:9-32
+21
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:11:5-67
+22-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:11:22-64
+23
+24    <application
+24-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:19:5-53:19
+25        android:allowBackup="false"
+25-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:21:9-36
+26        android:appCategory="game"
+26-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:23:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.2.0] /home/roycdavies/.gradle/caches/transforms-3/9bcb1a65f5938aad264f4d73e9a06f28/transformed/core-1.2.0/AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:hasFragileUserData="false"
+30-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:25:9-43
+31        android:icon="@mipmap/icon"
+31-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:22:9-36
+32        android:isGame="true"
+32-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:24:9-30
+33        android:label="@string/godot_project_name_string"
+33-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:20:9-58
+34        android:requestLegacyExternalStorage="false" >
+34-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:26:9-53
+35        <activity
+35-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:34:9-51:20
+36            android:name="com.godot.game.GodotApp"
+36-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:35:13-37
+37            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+37-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:42:13-141
+38            android:excludeFromRecents="false"
+38-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:39:13-47
+39            android:exported="true"
+39-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:40:13-36
+40            android:label="@string/godot_project_name_string"
+40-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:36:13-62
+41            android:launchMode="singleInstancePerTask"
+41-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:38:13-55
+42            android:resizeableActivity="true"
+42-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:43:13-47
+43            android:screenOrientation="userLandscape"
+43-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:41:13-50
+44            android:theme="@style/GodotAppSplashTheme" >
+44-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:37:13-55
+45            <intent-filter>
+45-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:46:13-50:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:47:17-69
+46-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:47:25-66
+47
+48                <category android:name="android.intent.category.DEFAULT" />
+48-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:48:17-76
+48-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:48:27-73
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:49:17-77
+49-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:49:27-74
+50            </intent-filter>
+51            <intent-filter
+51-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:28:1-33:17
+52                android:autoVerify="true"
+52-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:28:33-58
+53                android:label="" >
+53-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:28:16-32
+54                <action android:name="android.intent.action.VIEW" />
+54-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:29:2-54
+54-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:29:10-51
+55
+56                <category android:name="android.intent.category.DEFAULT" />
+56-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:48:17-76
+56-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/AndroidManifest.xml:48:27-73
+57                <category android:name="android.intent.category.BROWSABLE" />
+57-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:31:2-63
+57-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:31:12-60
+58
+59                <data
+59-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:32:2-89
+60                    android:host="reality.local:4005"
+60-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:32:31-64
+61                    android:pathPrefix=""
+61-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:32:65-86
+62                    android:scheme="https" />
+62-->/home/roycdavies/Development/Reality2/Reality2/XR/godot/android/build/src/debug/AndroidManifest.xml:32:8-30
+63            </intent-filter>
+64        </activity>
+65        <!-- Records the version of the Godot editor used for building -->
+66        <meta-data
+67            android:name="org.godotengine.editor.version"
+68            android:value="4.2.1.stable" /> <!-- Records the version of the Godot library -->
+69        <meta-data
+69-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:9-16:44
+70            android:name="org.godotengine.library.version"
+70-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:15:13-59
+71            android:value="4.2.1.stable" />
+71-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:13-41
+72
+73        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+73-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-80
+73-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:18-77
+74
+75        <activity
+75-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:9-24:75
+76            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+76-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-70
+77            android:exported="false"
+77-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-37
+78            android:process=":phoenix"
+78-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:23:13-39
+79            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+79-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:13-72
+80
+81        <provider
+81-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:9-34:20
+82            android:name="androidx.core.content.FileProvider"
+82-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-62
+83            android:authorities="ai.reality2.sentantvisualiser.fileprovider"
+83-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-64
+84            android:exported="false"
+84-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-37
+85            android:grantUriPermissions="true" >
+85-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:13-47
+86            <meta-data
+86-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:13-33:64
+87                android:name="android.support.FILE_PROVIDER_PATHS"
+87-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:32:17-67
+88                android:resource="@xml/godot_provider_paths" />
+88-->[godot-lib.template_debug.aar] /home/roycdavies/.gradle/caches/transforms-3/9a2d4eb6c6396b495fa445404429297b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:33:17-61
+89        </provider>
+90
+91        <meta-data
+91-->[GodotAndroidDeeplinkPlugin-1.0-debug.aar] /home/roycdavies/.gradle/caches/transforms-3/799b9bad129a41eeaf82dcccd4043257/transformed/jetified-GodotAndroidDeeplinkPlugin-1.0-debug/AndroidManifest.xml:10:9-12:98
+92            android:name="org.godotengine.plugin.v2.GodotAndroidDeeplinkPlugin"
+92-->[GodotAndroidDeeplinkPlugin-1.0-debug.aar] /home/roycdavies/.gradle/caches/transforms-3/799b9bad129a41eeaf82dcccd4043257/transformed/jetified-GodotAndroidDeeplinkPlugin-1.0-debug/AndroidManifest.xml:11:13-80
+93            android:value="org.godotengine.plugin.android.deeplink.GodotAndroidDeeplinkPlugin" />
+93-->[GodotAndroidDeeplinkPlugin-1.0-debug.aar] /home/roycdavies/.gradle/caches/transforms-3/799b9bad129a41eeaf82dcccd4043257/transformed/jetified-GodotAndroidDeeplinkPlugin-1.0-debug/AndroidManifest.xml:12:13-95
+94    </application>
+95
+96</manifest>

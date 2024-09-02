@@ -1,0 +1,424 @@
+[gd_scene load_steps=17 format=3 uid="uid://b2bw3n4qi7omp"]
+
+[ext_resource type="Script" path="res://scripts/UX.gd" id="1_6dfe7"]
+[ext_resource type="Script" path="res://addons/advanced_radial_menu/radial_menu_class.gd" id="1_11hd1"]
+[ext_resource type="Script" path="res://scripts/ShowChild.gd" id="2_7ly3v"]
+[ext_resource type="Texture2D" uid="uid://bys3swl71k3mn" path="res://icons/x-solid.png" id="3_rd3ty"]
+[ext_resource type="Theme" uid="uid://bw3p0gp08clgk" path="res://themes/UX theme.tres" id="5_rn40b"]
+[ext_resource type="Texture2D" uid="uid://dakc87yy11f7j" path="res://icons/plus-solid.png" id="6_18k0g"]
+[ext_resource type="Texture2D" uid="uid://dpue8uh8cfwly" path="res://icons/rotate-right-solid.png" id="6_f7fd1"]
+[ext_resource type="Texture2D" uid="uid://dilgdvic8eade" path="res://icons/info-solid.png" id="6_p1sqi"]
+[ext_resource type="Texture2D" uid="uid://c2g1fyyhtta56" path="res://icons/comment-regular.png" id="9_xgs6e"]
+[ext_resource type="FontFile" uid="uid://tmey4pvbyxdm" path="res://themes/Arial.ttf" id="10_7uwjw"]
+[ext_resource type="Theme" uid="uid://bylykeva3fynn" path="res://themes/UX.tres" id="10_781pj"]
+[ext_resource type="Script" path="res://scripts/LineEdit.gd" id="10_u6fv2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eurik"]
+font = ExtResource("10_7uwjw")
+font_size = 24
+font_color = Color(0.239216, 0.239216, 0.239216, 1)
+outline_size = 1
+outline_color = Color(0.239216, 0.239216, 0.239216, 1)
+shadow_size = 0
+shadow_color = Color(0.627451, 0.627451, 0.627451, 0.745098)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ctcas"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6a615"]
+font = ExtResource("10_7uwjw")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_qcpyc"]
+font = ExtResource("10_7uwjw")
+
+[node name="UX" type="Node" node_paths=PackedStringArray("menus", "input_box", "details_box")]
+script = ExtResource("1_6dfe7")
+menus = NodePath("Radial Menus")
+input_box = NodePath("Path")
+details_box = NodePath("Details")
+
+[node name="Radial Menus" type="Node" parent="."]
+script = ExtResource("2_7ly3v")
+
+[node name="Reality2" type="Control" parent="Radial Menus"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+script = ExtResource("1_11hd1")
+select_action_name = "mouse_left"
+auto_sizing = false
+color = Color(0.517647, 0.588235, 0.815686, 0.6)
+circle_radius = 200
+arc_color = Color(0.247059, 0.301961, 0.513726, 1)
+arc_inner_radius = 80
+arc_detail = 48
+arc_line_width = 1
+line_color = Color(0.247059, 0.301961, 0.513726, 1)
+line_width = 1
+children_size = 40
+hover_color = Color(0.423529, 0.568627, 0.937255, 0.47451)
+stroke_enabled = true
+stroke_color = Color(0.247059, 0.301961, 0.513726, 1)
+stroke_width = 1
+animated_pulse_intensity = 10
+animated_pulse_offset = 140
+animated_pulse_speed = 1
+animated_pulse_color = Color(0.247059, 0.301961, 0.513726, 1)
+
+[node name="CloseAll" type="TextureRect" parent="Radial Menus/Reality2"]
+visible = false
+layout_mode = 0
+offset_left = 121.244
+offset_top = -70.0
+offset_right = 161.244
+offset_bottom = -30.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+texture = ExtResource("3_rd3ty")
+expand_mode = 1
+
+[node name="ReloadAll" type="TextureRect" parent="Radial Menus/Reality2"]
+visible = false
+layout_mode = 0
+offset_left = -121.244
+offset_top = -70.0
+offset_right = -81.2436
+offset_bottom = -30.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+texture = ExtResource("6_f7fd1")
+expand_mode = 1
+
+[node name="OpenNew" type="TextureRect" parent="Radial Menus/Reality2"]
+visible = false
+layout_mode = 0
+offset_top = 140.0
+offset_right = 40.0
+offset_bottom = 180.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme = ExtResource("5_rn40b")
+texture = ExtResource("6_18k0g")
+expand_mode = 1
+
+[node name="Node" type="Control" parent="Radial Menus"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_11hd1")
+select_action_name = "mouse_left"
+auto_sizing = false
+color = Color(0.517647, 0.588235, 0.815686, 0.6)
+circle_radius = 200
+arc_color = Color(0.247059, 0.301961, 0.513726, 1)
+arc_inner_radius = 80
+arc_detail = 48
+arc_line_width = 1
+line_color = Color(0.247059, 0.301961, 0.513726, 1)
+line_width = 1
+children_size = 40
+hover_color = Color(0.423529, 0.568627, 0.937255, 0.47451)
+stroke_enabled = true
+stroke_color = Color(0.247059, 0.301961, 0.513726, 1)
+stroke_width = 1
+animated_pulse_intensity = 10
+animated_pulse_offset = 7
+animated_pulse_speed = 2
+animated_pulse_color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[node name="Close" type="TextureRect" parent="Radial Menus/Node"]
+visible = false
+layout_mode = 0
+offset_left = 98.9949
+offset_top = -98.9949
+offset_right = 138.995
+offset_bottom = -58.9949
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+texture = ExtResource("3_rd3ty")
+expand_mode = 1
+
+[node name="Reload" type="TextureRect" parent="Radial Menus/Node"]
+visible = false
+layout_mode = 0
+offset_left = -98.9949
+offset_top = -98.9949
+offset_right = -58.9949
+offset_bottom = -58.9949
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+mouse_default_cursor_shape = 3
+texture = ExtResource("6_f7fd1")
+expand_mode = 1
+
+[node name="NewSentant" type="TextureRect" parent="Radial Menus/Node"]
+visible = false
+layout_mode = 0
+offset_left = -98.995
+offset_top = 98.9949
+offset_right = -58.995
+offset_bottom = 138.995
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+mouse_default_cursor_shape = 3
+texture = ExtResource("6_18k0g")
+expand_mode = 1
+
+[node name="Info" type="TextureRect" parent="Radial Menus/Node"]
+visible = false
+layout_mode = 0
+offset_left = 98.9949
+offset_top = 98.995
+offset_right = 138.995
+offset_bottom = 138.995
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme = ExtResource("5_rn40b")
+texture = ExtResource("6_p1sqi")
+expand_mode = 1
+
+[node name="Sentant" type="Control" parent="Radial Menus"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_11hd1")
+select_action_name = "mouse_left"
+auto_sizing = false
+color = Color(0.517647, 0.588235, 0.815686, 0.6)
+circle_radius = 200
+arc_color = Color(0.247059, 0.301961, 0.513726, 1)
+arc_inner_radius = 80
+arc_detail = 48
+arc_line_width = 1
+line_color = Color(0.247059, 0.301961, 0.513726, 1)
+line_width = 1
+children_size = 40
+hover_color = Color(0.423529, 0.568627, 0.937255, 0.47451)
+stroke_enabled = true
+stroke_color = Color(0.247059, 0.301961, 0.513726, 1)
+stroke_width = 1
+animated_pulse_intensity = 10
+animated_pulse_offset = 7
+animated_pulse_speed = 2
+animated_pulse_color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[node name="Delete" type="TextureRect" parent="Radial Menus/Sentant"]
+visible = false
+layout_mode = 0
+offset_top = 115.0
+offset_right = 40.0
+offset_bottom = 155.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+mouse_default_cursor_shape = 3
+texture = ExtResource("3_rd3ty")
+expand_mode = 1
+
+[node name="Message" type="TextureRect" parent="Radial Menus/Sentant"]
+visible = false
+layout_mode = 0
+offset_left = 99.5929
+offset_top = -57.5
+offset_right = 139.593
+offset_bottom = -17.5
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+texture = ExtResource("9_xgs6e")
+expand_mode = 1
+
+[node name="Info" type="TextureRect" parent="Radial Menus/Sentant"]
+visible = false
+layout_mode = 0
+offset_left = -99.5929
+offset_top = -57.5
+offset_right = -59.5929
+offset_bottom = -17.5
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme = ExtResource("5_rn40b")
+texture = ExtResource("6_p1sqi")
+expand_mode = 1
+
+[node name="Events" type="Control" parent="Radial Menus"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_11hd1")
+select_action_name = "mouse_left"
+auto_sizing = false
+first_in_center = true
+color = Color(0.517647, 0.588235, 0.815686, 0.6)
+circle_radius = 200
+arc_color = Color(0.247059, 0.301961, 0.513726, 1)
+arc_inner_radius = 80
+arc_detail = 48
+arc_line_width = 1
+line_color = Color(0.247059, 0.301961, 0.513726, 1)
+line_width = 1
+children_size = 40
+hover_color = Color(0.423529, 0.568627, 0.937255, 0.47451)
+stroke_enabled = true
+stroke_color = Color(0.247059, 0.301961, 0.513726, 1)
+stroke_width = 1
+animated_pulse_intensity = 10
+animated_pulse_offset = 7
+animated_pulse_speed = 2
+animated_pulse_color = Color(0.431373, 0.431373, 0.431373, 1)
+
+[node name="__close__" type="TextureRect" parent="Radial Menus/Events"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+mouse_default_cursor_shape = 3
+texture = ExtResource("3_rd3ty")
+expand_mode = 1
+
+[node name="__event__" type="Label" parent="Radial Menus/Events"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_right = 42.0
+offset_bottom = 40.0
+pivot_offset = Vector2(22, 20)
+text = "event"
+label_settings = SubResource("LabelSettings_eurik")
+
+[node name="Details" type="Panel" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_ctcas")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -160.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_781pj")
+
+[node name="Name" type="Label" parent="Details"]
+visible = false
+layout_mode = 2
+offset_right = 400.0
+offset_bottom = 40.0
+text = "name"
+label_settings = SubResource("LabelSettings_6a615")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Details"]
+visible = false
+layout_mode = 2
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 320.0
+text = "description"
+label_settings = SubResource("LabelSettings_qcpyc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Details"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 145.0
+offset_right = 50.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OK"
+
+[node name="Path" type="Panel" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_781pj")
+
+[node name="LineEdit" type="LineEdit" parent="Path"]
+visible = false
+layout_mode = 2
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 386.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+theme = ExtResource("10_781pj")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "path"
+alignment = 1
+virtual_keyboard_type = 7
+select_all_on_focus = true
+caret_blink = true
+script = ExtResource("10_u6fv2")
+
+[connection signal="slot_selected" from="Radial Menus/Reality2" to="." method="menu_selected"]
+[connection signal="slot_selected" from="Radial Menus/Node" to="." method="menu_selected"]
+[connection signal="slot_selected" from="Radial Menus/Sentant" to="." method="menu_selected"]
+[connection signal="slot_selected" from="Radial Menus/Events" to="." method="menu_selected"]
+[connection signal="button_down" from="Details/Button" to="." method="esckey_pressed"]
+[connection signal="pressed" from="Details/Button" to="." method="esckey_pressed"]
+[connection signal="esc_key_pressed" from="Path/LineEdit" to="." method="esckey_pressed"]
+[connection signal="text_submitted" from="Path/LineEdit" to="." method="enterkey_pressed"]

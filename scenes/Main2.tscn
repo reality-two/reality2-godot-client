@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://l74ghsuux3mg"]
+
+[ext_resource type="Script" path="res://scripts/GraphQL.gd" id="1_n0u0d"]
+
+[node name="Main2" type="Node3D"]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="GraphQL" type="Node3D" parent="."]
+script = ExtResource("1_n0u0d")
